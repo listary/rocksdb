@@ -44,7 +44,7 @@ enum class OccValidationPolicy {
 };
 
 struct OptimisticTransactionDBOptions {
-  OccValidationPolicy validate_policy = OccValidationPolicy::kValidateParallel;
+  OccValidationPolicy validate_policy = OccValidationPolicy::kValidateSerial;
 
   // works only if validate_policy == OccValidationPolicy::kValidateParallel
   uint32_t occ_lock_buckets = (1 << 20);
